@@ -17,4 +17,8 @@ public class ChalleculumApplication {
     public PasswordEncoder passwordEncoder() {
         return PasswordEncoderFactories.createDelegatingPasswordEncoder();
     }
+    static {
+        System.setProperty("com.amazonaws.sdk.disableEc2Metadata","true");
+    }
+
 }
